@@ -1,6 +1,6 @@
 {
   "name": "ti-genesis",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "a node.js module",
   "keywords": [],
   "homepage": "git://github.com/tiger8/genesis",
@@ -16,11 +16,19 @@
   },
   "main": "./lib/genesis.js",
   "scripts": {
-    "test": "grunt test"
+    "test": "grunt test",
+	"_install": "node ./scripts/install.js"
   },
   "repository": {
     "type": "git",
     "url": "git://github.com/tiger8/genesis.git"
+  },
+  "dependencies": {
+    "shelljs": "*",
+    "wrench": "*",
+    "fs-extended": "*",
+    "lodash": "*",
+    "replace": "*"
   },
   "devDependencies": {
 	"grunt": "~0.4.5",

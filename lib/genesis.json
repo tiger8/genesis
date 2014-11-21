@@ -1,0 +1,10 @@
+﻿{
+    "autoUpdate":  false,
+    "exclusiveViews": [],
+    "customFolders": [],
+    "tasks": {
+        "preLoad": [],
+        "preCompile": [],
+        "postCompile": []
+    }
+}

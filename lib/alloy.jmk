@@ -1,0 +1,30 @@
+
+
+//START-GENESIS_0.0.1//
+var genesis;
+
+task( "pre:load", function ( config, logger )
+{
+	logger.trace( '********************* STARTING PRE:LOAD ***************************' );
+	var path = require( 'path' );
+	genesis = require( path.join( config.dir.project, 'node_modules', 'ti-genesis' ) );
+	genesis.alloy.preLoad( config, logger );
+	logger.trace( '********************* FINISHED PRE:LOAD ***************************' );
+} );
+
+
+task( "pre:compile", function ( config, logger )
+{
+	logger.trace( '********************* STARTING PRE:COMPILE ***************************' );
+	genesis.alloy.preCompile( config, logger );
+	logger.info( '********************* FINISHED PRE:COMPILE ***************************' );
+} );
+
+
+task( 'post:compile', function ( config, logger )
+{
+	logger.trace( '********************* STARTING POST:COMPILE ***************************' );
+	genesis.alloy.postCompile( config, logger );
+	logger.trace( '********************* FINISHED POST:COMPILE ***************************' );
+} );
+//END:GENESIS_0.0.1//

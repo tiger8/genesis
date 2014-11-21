@@ -1,1 +1,1 @@
-module.exports = require('./genesis');
+module.exports = require('./lib/genesis');
